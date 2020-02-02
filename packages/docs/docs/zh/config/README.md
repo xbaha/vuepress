@@ -179,6 +179,10 @@ VuePress 提供了一种添加额外样式的简便方法。你可以创建一�
 }
 ```
 
+::: warning
+不论是在 `palette.styl` 或是 `index.styl` ，正常的 `.css` 样式表都不能被透过 `@import` / `@require` 引用。不过你仍然可以透过其他 Stylus 样式表引入样式。
+:::
+
 ## 主题
 
 ### theme
@@ -313,7 +317,7 @@ module.exports = {
 - 默认值: `['h2', 'h3']`
 
 Markdown 文件的 headers (标题 & 小标题) 会在准备阶段被提取出来，并存储在 `this.$page.headers` 中。默认情况下，VuePress 会提取 `h2` 和 `h3` 标题。你可以通过这个选项来修改提取出的标题级别。
- 
+
 ``` js
 module.exports = {
   markdown: {
